@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>🌍 Date & Time Display</h1>
+
+  <div class="section">
+    <h3>📍 Local Time</h3>
+    <p><strong>Date:</strong> {{ currentDate }}</p>
+    <p><strong>Time:</strong> {{ currentTime }}</p>
+  </div>
+
+  <div class="section">
+    <h3>Select Country</h3>
+    <select [(ngModel)]="selectedCountry" (change)="onCountryChange()">
+      <option value="">-- Choose a country --</option>
+      <option *ngFor="let country of countries">{{ country }}</option>
+    </select>
+  </div>
+
+  <div *ngIf="selectedCountry" class="section">
+    <h3>⏰ {{ selectedCountry }} Time</h3>
+    <p><strong>Date:</strong> {{ countryDate }}</p>
+    <p><strong>Time:</strong> {{ countryTime }}</p>
+  </div>
+</div>

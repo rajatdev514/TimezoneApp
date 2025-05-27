@@ -1,6 +1,5 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { TimezoneComponent } from './app/timezone/timezone.component';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(TimezoneComponent)
+  .catch(err => console.error('App Bootstrap Error:', err));
